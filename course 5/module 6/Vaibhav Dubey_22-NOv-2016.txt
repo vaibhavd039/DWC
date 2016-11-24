@@ -1,0 +1,28 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "To Date 'yyyyMMdd' [REPORT_BEGIN_DATE_ID] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "REPORT_BEGIN_DATE_ID",
+    "expression": "grel:toDate(value, 'yyyyMMdd')",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "To Date 'yyyyMMdd' [REPORT_END_DATE_ID] (#### Rows)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "REPORT_END_DATE_ID",
+    "expression": "grel:toDate(value, 'yyyyMMdd')",
+    "onError": "set-to-blank",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
